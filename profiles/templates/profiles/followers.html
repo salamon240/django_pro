@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{user.username}}{% endblock  %}
+{% block body %}
+{% if posts %}
+<h1>follower page extends<h1>
+
+    {% for post in posts %}
+    <div id="psts-container">
+    {% include "include/post.html" with post=post  %}
+    </div>
+    
+    {% endfor %}
+    {% else %}
+    <h1>YOU DONT FOLLOW ENYONE<h1>
+{% endif %}
+{% endblock  %}
